@@ -1,8 +1,8 @@
-class Class {};
+class Base {};
 
 int main() {
-    for (int i = 0; i < 1000000000; ++i) {
-	Class obj;
+    for (int i = 0; i < 100000000; ++i) {
+	Base obj;
     }
     return 0;
 }
