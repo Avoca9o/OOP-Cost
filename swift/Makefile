@@ -5,8 +5,8 @@ run:
 	make m2
 	make m3
 
-m: main.cpp
-	g++ main.cpp -O0 -o main; \
+m: main.swift
+	swiftc main.swift -o main; \
 	for (( i=1; i<=11; i++ )) \
 	do \
 	s=$$(gdate +%s%3N); \
@@ -16,8 +16,8 @@ m: main.cpp
 	done; \
 	rm main
 
-m2: main2.cpp
-	g++ main2.cpp -O0 -o main; \
+m2: main2.swift
+	swiftc main2.swift -o main; \
 	for (( i=1; i<=11; i++ )) \
 	do \
 	s=$$(gdate +%s%3N); \
@@ -27,8 +27,8 @@ m2: main2.cpp
 	done; \
 	rm main
 
-m3: main3.cpp
-	g++ main3.cpp -O0 -o main; \
+m3: main3.swift
+	swiftc main3.swift -o main; \
 	for (( i=1; i<=11; i++ )) \
 	do \
 	s=$$(gdate +%s%3N); \

@@ -4,20 +4,20 @@ run:
 	make m
 	make m2
 
-m: main.py
+m: main.php
 	for (( i=1; i<=11; i++ )) \
 	do \
 	s=$$(gdate +%s%3N); \
-	python3 main.py; \
+	php main.php; \
 	e=$$(gdate +%s%3N); \
 	echo $$(($$e-$$s)) >> output.txt; \
-	done
+	done;
 
-m2: main2.py
+m2: main2.php
 	for (( i=1; i<=11; i++ )) \
 	do \
 	s=$$(gdate +%s%3N); \
-	python3 main2.py; \
+	php main2.php; \
 	e=$$(gdate +%s%3N); \
 	echo $$(($$e-$$s)) >> output.txt; \
-	done
+	done;

@@ -4,20 +4,20 @@ run:
 	make m
 	make m2
 
-m: main.py
+m: main.js
 	for (( i=1; i<=11; i++ )) \
 	do \
 	s=$$(gdate +%s%3N); \
-	python3 main.py; \
+	node main.js; \
 	e=$$(gdate +%s%3N); \
 	echo $$(($$e-$$s)) >> output.txt; \
 	done
 
-m2: main2.py
+m2: main2.js
 	for (( i=1; i<=11; i++ )) \
 	do \
 	s=$$(gdate +%s%3N); \
-	python3 main2.py; \
+	node main2.js; \
 	e=$$(gdate +%s%3N); \
 	echo $$(($$e-$$s)) >> output.txt; \
 	done
