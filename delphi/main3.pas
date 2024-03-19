@@ -27,7 +27,7 @@ var
 begin
   obj := TDerived.Create;
 
-  for i:=1 to 100000000 do
+  for i:=0 to 100000000 do
   begin
     obj.DoNothing;
   end;

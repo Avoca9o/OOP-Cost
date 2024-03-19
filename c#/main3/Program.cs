@@ -7,7 +7,7 @@ namespace Program
         static void Main(string[] args)
         {
             Base obj = new Derived();
-            for (int i = 0; i < 1000000000; ++i) {
+            for (int i = 0; i < 100000000; ++i) {
                 obj.DoSomething();
             }
         }

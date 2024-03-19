@@ -7,6 +7,6 @@ class Derived : Base {
 }
 
 let obj: Base = Derived()
-for _ in 1...100000000 {
+for _ in 0...100000000 {
     obj.doNothing()
 }

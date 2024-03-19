@@ -1,9 +1,9 @@
 run: main.go
 	for (( i=1; i<=11; i++ )) \
 	do \
-	go build main.go; \
+	go build -o main -gcflags="-N -l" main.go; \
 	s=$$(gdate +%s%3N); \
-	go run main.go; \
+	./main; \
 	e=$$(gdate +%s%3N); \
 	echo $$(($$e-$$s)) >> ../output.txt; \
 	done; \

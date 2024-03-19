@@ -1,6 +1,6 @@
 class Base
 end
 
-for i in 1..100000000
+for i in 0..100000000
   obj = Base.new()
 end

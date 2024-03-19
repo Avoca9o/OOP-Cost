@@ -42,7 +42,7 @@ program main
 
   base_ptr => derived_obj
 
-  do i = 1, 100000000
+  do i = 0, 100000000
     call base_ptr%do_nothing()
   end do
 

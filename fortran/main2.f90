@@ -6,7 +6,7 @@ end module types
 program main
     use :: types
     type(base) :: obj
-    do i = 1, 100000000
+    do i = 0, 100000000
         obj = base()
     end do
 end program main

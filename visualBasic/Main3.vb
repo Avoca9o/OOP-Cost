@@ -12,7 +12,7 @@ Module Main
     
     Sub Main()  
         Dim obj As Base = New Derived()
-        For i As Integer = 1 To 100000000
+        For i As Integer = 0 To 100000000
             obj.DoNothing()
         Next
     End Sub  

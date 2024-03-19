@@ -6,7 +6,7 @@ namespace Program
     {
         static void Main(string[] args)
         {
-            for (int i = 0; i < 10000000; ++i) {
+            for (int i = 0; i < 100000000; ++i) {
                 Base obj = new Base();
             }
         }

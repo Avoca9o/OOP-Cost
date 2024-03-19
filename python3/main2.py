@@ -1,5 +1,5 @@
 class Base:
     pass
 
-for i in range(100000000):
+for i in range(0, 100000000):
     obj = Base()

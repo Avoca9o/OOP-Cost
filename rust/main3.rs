@@ -10,7 +10,7 @@ impl IFace for Base {
 fn main() {
     let obj: Box<dyn IFace> = Box::new(Base);
     
-    for _ in 1..100000000 {
+    for _ in 0..100000000 {
         obj.do_nothing()
     }
 }

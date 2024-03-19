@@ -1,5 +1,5 @@
 filename = '/output.txt'
-folders = ['c++', 'c#', 'java', 'go', 'python3', 'javascript', 'php', 'swift', 'kotlin', 'rust', 'ruby', 'fortran', 'delphi']
+folders = ['c++', 'c#', 'java', 'go', 'python3', 'javascript', 'php', 'kotlin', 'rust', 'ruby', 'fortran', 'delphi']
 
 with open('output.txt', 'w') as fout:
     for folder in folders:

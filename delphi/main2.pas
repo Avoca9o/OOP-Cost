@@ -11,7 +11,7 @@ var
   i: int64;
 
 begin
-  for i:=1 to 100000000 do
+  for i:=0 to 100000000 do
   begin
     obj := Base.Create;
     obj.Free;

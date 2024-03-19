@@ -10,7 +10,7 @@ m: main.kt
 	for (( i=1; i<=11; i++ )) \
 	do \
 	s=$$(gdate +%s%3N); \
-	java -jar main.jar; \
+	java -Xint -jar main.jar; \
 	e=$$(gdate +%s%3N); \
 	echo $$(($$e-$$s)) >> output.txt; \
 	done; \
@@ -21,7 +21,7 @@ m2: main2.kt
 	for (( i=1; i<=11; i++ )) \
 	do \
 	s=$$(gdate +%s%3N); \
-	java -jar main.jar; \
+	java -Xint -jar main.jar; \
 	e=$$(gdate +%s%3N); \
 	echo $$(($$e-$$s)) >> output.txt; \
 	done; \
@@ -32,7 +32,7 @@ m3: main3.kt
 	for (( i=1; i<=11; i++ )) \
 	do \
 	s=$$(gdate +%s%3N); \
-	java -jar main.jar; \
+	java -Xint -jar main.jar; \
 	e=$$(gdate +%s%3N); \
 	echo $$(($$e-$$s)) >> output.txt; \
 	done; \

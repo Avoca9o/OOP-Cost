@@ -8,7 +8,7 @@ class Derived() : Base() {
 
 fun main() {
     val obj : Base = Derived()
-    for (i in 1..100000000) {
+    for (i in 0..100000000) {
         obj.doNothing()
     }
 }
