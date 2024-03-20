@@ -12,7 +12,7 @@ Results #1 (10^8 times, in milliseconds)
 
 | language\type | Simple loop | Object Creation | Dynamic dispatch |
 | ------------- | ----------- | --------------- | ---------------- |
-| c++           | 97          | 98              | 165              |
+| c++           | 93          | 107             | 211              |
 | c#            | 699         | 1069            | 876              |
 | java          | 415         | 3395            | 1638             |
 | go            | 205         | 241             |  -               |

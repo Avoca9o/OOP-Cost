@@ -6,34 +6,25 @@ run:
 	make m3
 
 m: main.cpp
-	g++ main.cpp -O0 -o main; \
+	g++ -w -std=c++17 main.cpp -O0 -o main; \
 	for (( i=1; i<=11; i++ )) \
 	do \
-	s=$$(gdate +%s%3N); \
 	./main; \
-	e=$$(gdate +%s%3N); \
-	echo $$(($$e-$$s)) >> output.txt; \
 	done; \
 	rm main
 
 m2: main2.cpp
-	g++ main2.cpp -O0 -o main; \
+	g++ -w -std=c++17 main2.cpp -O0 -o main; \
 	for (( i=1; i<=11; i++ )) \
 	do \
-	s=$$(gdate +%s%3N); \
 	./main; \
-	e=$$(gdate +%s%3N); \
-	echo $$(($$e-$$s)) >> output.txt; \
 	done; \
 	rm main
 
 m3: main3.cpp
-	g++ main3.cpp -O0 -o main; \
+	g++ -w -std=c++17 main3.cpp -O0 -o main; \
 	for (( i=1; i<=11; i++ )) \
 	do \
-	s=$$(gdate +%s%3N); \
 	./main; \
-	e=$$(gdate +%s%3N); \
-	echo $$(($$e-$$s)) >> output.txt; \
 	done; \
 	rm main

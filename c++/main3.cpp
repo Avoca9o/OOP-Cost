@@ -1,3 +1,6 @@
+#include <chrono>
+#include <fstream>
+
 class Base {
 public:
     virtual void do_nothing() const = 0;
@@ -11,9 +14,21 @@ class Derived : public Base {
 
 int main() {
     Base* obj = new Derived();
+
+    auto start = std::chrono::high_resolution_clock::now();
+
     for (int i = 0; i < 100000000; ++i) {
         obj->do_nothing();
     }
+
+    auto finish = std::chrono::high_resolution_clock::now();
+    auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(finish - start);
+    std::ofstream fout("output.txt", std::ios::app);
+
+    fout << elapsed.count() << "\n";
+
+    fout.close();
+
     delete obj;
     return 0;
 }
