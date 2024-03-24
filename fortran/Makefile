@@ -10,10 +10,7 @@ m: main.f90
 	gfortran main.f90 -O0 -o main; \
 	for (( i=1; i<=11; i++ )) \
 	do \
-	s=$$(gdate +%s%3N); \
 	./main; \
-	e=$$(gdate +%s%3N); \
-	echo $$(($$e-$$s)) >> output.txt; \
 	done; \
 	rm main
 
@@ -21,10 +18,7 @@ m2: main2.f90
 	gfortran main2.f90 -O0 -o main; \
 	for (( i=1; i<=11; i++ )) \
 	do \
-	s=$$(gdate +%s%3N); \
 	./main; \
-	e=$$(gdate +%s%3N); \
-	echo $$(($$e-$$s)) >> output.txt; \
 	done; \
 	rm main types.mod
 
@@ -32,9 +26,6 @@ m3: main3.f90
 	gfortran main3.f90 -O0 -o main; \
 	for (( i=1; i<=11; i++ )) \
 	do \
-	s=$$(gdate +%s%3N); \
 	./main; \
-	e=$$(gdate +%s%3N); \
-	echo $$(($$e-$$s)) >> output.txt; \
 	done; \
 	rm main types.mod

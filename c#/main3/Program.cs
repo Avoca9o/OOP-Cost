@@ -1,15 +1,21 @@
 ﻿using System;
+using System.Diagnostics;
+using System.IO;
 
-namespace Program
-{
-    class Program
-    {
-        static void Main(string[] args)
+class Program {
+    static void Main() {
+        Base obj = new Derived();
+        Stopwatch stopwatch = Stopwatch.StartNew();
+        
+        for (int i = 0; i < 100000000; ++i) {
+            obj.DoSomething();
+        }
+
+        stopwatch.Stop();
+
+        using (StreamWriter writer = new StreamWriter("../output.txt", true))
         {
-            Base obj = new Derived();
-            for (int i = 0; i < 100000000; ++i) {
-                obj.DoSomething();
-            }
+            writer.WriteLine(stopwatch.ElapsedMilliseconds);
         }
     }
 

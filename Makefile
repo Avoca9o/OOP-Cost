@@ -9,7 +9,6 @@ run:
 	cd ../kotlin && make run; \
 	cd ../rust && make run; \
 	cd ../ruby && make run; \
-	cd ../swift && make run; \
 	cd ../fortran && make run; \
 	cd ../delphi && make run; \
 	cd ../ && python3 parse.py
